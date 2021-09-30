@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COFFEE SHOP</title>
+     
+     <script type="text/javascript">
+     	function cal()
+     	{
+     		var name,a,b,c,d,e,f,g,h,a1,b1,c1,d1,e1,f1,g1,h1,tot,a2=0,b2=0,c2=0,d2=0,e2=0,f2=0,g2=0,h2=0,st="",s="";
+     		name=document.frm1.tname.value;
+
+     		a=document.frm1.item1.value;
+     		b=document.frm1.item2.value;
+     		c=document.frm1.item3.value;
+     		d=document.frm1.item4.value;
+     		e=document.frm1.item5.value;
+     		f=document.frm1.item6.value;
+     		g=document.frm1.item7.value;
+     		h=document.frm1.item8.value;
+
+     		
+     		
+
+     		if (document.getElementById('r1').checked)
+     		{
+     			a1=parseInt(document.frm1.coffee1.value);
+     			a2=a*a1;
+     			s=s+"<br> Black coffee ("+a1+")="+a2;
+     		}
+     		if(document.getElementById('r2').checked)
+     		{
+     			b1=parseInt(document.frm1.coffee2.value);
+     			b2=b*b1;
+     			s=s+"<br> Cold coffee ("+b1+")="+b2;
+     		}
+     		if(document.getElementById('r3').checked)
+     		{
+     			c1=parseInt(document.frm1.coffee3.value);
+     			c2=c*c1;
+     			s=s+"<br> Cappuccino ("+c1+")="+c2;
+     		}
+     		if(document.getElementById('r4').checked)
+     		{
+     			d1=parseInt(document.frm1.coffee4.value);
+     			d2=d*d1;
+     			s=s+"<br> Americano ("+d1+")="+d2;
+     		}
+     		if(document.getElementById('r5').checked)
+     		{
+     			e1=parseInt(document.frm1.coffee5.value);
+     			e2=e*e1;
+     			s=s+"<br> Caffe Latte ("+e1+")="+e2;
+     		}
+     		if(document.getElementById('r6').checked)
+     		{
+     			f1=parseInt(document.frm1.coffee6.value);
+     			f2=f*f1;
+     			s=s+"<br> Caffe Mocha ("+f1+")="+f2;
+     		}
+     		if(document.getElementById('r7').checked)
+     		{
+     			g1=parseInt(document.frm1.coffee7.value);
+     			g2=g*g1;
+     			s=s+"<br> Hot Chocolate Coffee ("+g1+")="+g2;
+     		}
+     		if(document.getElementById('r8').checked)
+     		{
+     			h1=parseInt(document.frm1.coffee8.value);
+     			h2=h*h1;
+     			s=s+"<br> Espresso ("+h1+")="+h2;
+     		}
+
+     		tot=a2+b2+c2+d2+e2+f2+g2+h2;
+     		st="Customer Name="+name+s+"<br>Total Payable Amount="+tot;
+     		document.getElementById("msg").innerHTML=st;
+     	}
+
+     </script>
+
+
+	<style type="text/css">
+		body{
+      background: url('2.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+	    border: 10px solid #FEF163;
+	    padding: 50px;
+	    margin: 100px;
+        }
+        hr.line
+        {
+        	border: 2px dotted #FEF163;
+        }
+		table
+		{
+			margin-left: auto;
+			margin-right: auto;
+			color: #FEF163;
+		}
+		hr.line1
+		{
+			border: 2px solid #FEF163;
+		}
+		hr.line2
+		{
+			border: 1px dashed #FEF163;
+		}
+		form
+		{
+			text-align: center;
+		}
+		p
+		{
+			color: white;
+		}
+    
+   
+
+	</style>
+</head>
+
+<body >
+   <center><h1><b><font color="#FEF163">WELCOME TO MY COFFEE SHOP</font></b></h1></center>
+   <br><hr class="line"><br>
+   <center><h2><b><font color="#FEF163">Menu:-</font></b></h2></center>
+   <br><br>
+  
+  <table>
+  	
+  <tr>
+  	<td><b>1.Black Coffee</b></td>
+
+  	<td><b>90</b></td>
+  	</tr>
+  	
+  	<tr>     
+   	<td><b>2.Cold Coffee </b></td>
+   	<td><b>90</b></td>
+   </tr>
+   <tr>
+   	<td><b>3.Cappuccino</b>  </td>                
+   	<td><b>120</b></td>
+   </tr>
+   <tr>
+   	<td><b>4.Americano</b></td>
+   	<td> <b> 120</b></td>
+   </tr>
+   <tr>
+   	<td><b>5.Caffe Latte</b>  </td>
+   	<td><b>140</b></td>
+   </tr>
+   <tr>
+   	<td><b>6.Caffe Mocha</b></td>
+   	<td><b>140</b></td>
+   </tr>
+   <tr>
+   	<td><b>7.Hot Chococlate Coffee </b></td>
+   	<td><b>150</b></td>
+   </tr>
+   <tr>
+   	<td><b>8.Espresso  </b>     </td>
+   	<td><b>90</b></td>
+  </tr>
+
+
+  </table>
+
+
+  <hr class="line2">
+
+  <center><h2><b><font color="#FEF163">Order Details</font></b></h2></center>
+  <hr class="line1">
+
+  <form name="frm1">
+  	<b><font color="#FEF163">Customer Name:</font></b> <input type="text" name="tname"><br><br>
+    <b><font color="#FEF163">Items Ordered:</font></b> <br><br>
+
+    <table>
+    <tr>
+     <td><font color="#FEF163">Black Coffee</font><input type="checkbox" name="item1" value="90" id="r1"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee1" size="1" ></td>
+    </tr>
+    
+    <tr>
+    <td><font color="#FEF163">Cold Coffee</font><input type="checkbox" name="item2" value="90" id="r2"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee2" size="1"></td>
+  </tr>
+
+    <tr>
+    <td><font color="#FEF163">Cappuccino</font><input type="checkbox" name="item3" value="120" id="r3"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee3" size="1"></td>
+  </tr>
+
+     <tr>
+    <td><font color="#FEF163">Ameriacno</font><input type="checkbox" name="item4" value="120" id="r4"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee4" size="1"></td>
+  </tr>
+
+     <tr>
+    <td><font color="#FEF163">Caffe Latte</font><input type="checkbox" name="item5" value="140" id="r5"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee5" size="1"></td>
+  </tr>
+
+    <tr>
+    <td><font color="#FEF163">Caffe Mocha</font><input type="checkbox" name="item6" value="140" id="r6"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee6" size="1"></td>
+  </tr>
+    
+    <tr>
+    <td><font color="#FEF163">Hot Chocolate Coffee</font><input type="checkbox" name="item7" value="150" id="r7"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee7" size="1"></td>
+
+    <tr>
+    <td><font color="#FEF163">Espresso</font><input type="checkbox" name="item8" value="90" id="r8"></td>
+    <td><font color="#FEF163">Number of cups:</font><input type="text" name="coffee8" size="1"></td>
+  </tr>
+</table>
+    
+   <hr class="line2">
+   <center><h2><b><font color="#FEF163">Your Bill</font></b></h2></center>
+  <hr class="line1">
+  <br><input type="button" value="Show Bill" onclick="cal()">
+
+    <p id="msg"></p>
+
+</form>
+
+</body>
+</html>
